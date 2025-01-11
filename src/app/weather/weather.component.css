@@ -1,74 +1,69 @@
-/* Contenedor principal */
 .weather-container {
-  font-family: 'Arial', sans-serif;
-  background-color: #f0f8ff;
-  border-radius: 10px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  max-width: 600px;
-  margin: 50px auto;
-  padding: 30px;
   text-align: center;
-  color: #333;
+  font-family: 'Arial', sans-serif;
+  padding: 20px;
+  max-width: 500px;
+  margin: 0 auto;
+  background-color: #f4f4f9;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave alrededor de todo */
 }
 
-/* Título */
 h1 {
   font-size: 36px;
-  color: #007BFF;
+  color: #333;
   margin-bottom: 20px;
 }
 
-/* Contenedor de entrada y botón */
 .input-container {
+  margin-bottom: 20px;
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 10px;
-  margin-bottom: 20px;
 }
 
-/* Estilos de la caja de entrada */
-input {
+.city-select {
+  padding: 12px;
+  font-size: 16px;
+  width: 250px; /* Asegura que el select tenga el mismo tamaño que el botón */
+  border: 1px solid #ccc;
+  border-radius: 25px; /* Bordes más curvos */
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil en el select */
+}
+
+.city-select:hover {
+  border-color: #4CAF50;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15); /* Sombra más marcada al pasar el cursor */
+}
+
+button {
   padding: 12px 20px;
   font-size: 16px;
-  border: 2px solid #007BFF;
-  border-radius: 5px;
-  width: 200px;
-  outline: none;
-  transition: border-color 0.3s ease;
-}
-
-/* Efecto al hacer foco en el input */
-input:focus {
-  border-color: #0056b3;
-}
-
-/* Estilos del botón */
-button {
-  padding: 12px 25px;
-  font-size: 16px;
-  background-color: #007BFF;
+  background-color: #4CAF50;
   color: white;
   border: none;
-  border-radius: 5px;
+  border-radius: 25px; /* Bordes más curvos */
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  width: 250px; /* Igual al select para que ambos tengan el mismo tamaño */
+  transition: all 0.3s ease;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil en el botón */
 }
 
-/* Cambio de color al pasar el mouse */
 button:hover {
-  background-color: #0056b3;
+  background-color: #45a049;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2); /* Sombra más marcada al pasar el cursor */
 }
 
-/* Estilos para la sección de clima */
 .weather-info {
-  background-color: #ffffff;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
 }
 
-.weather-info h2 {
-  font-size: 28px;
+.weather-icon {
+  font-size: 50px;
+  color: #ffb700; /* Color amarillo para el sol */
   margin-bottom: 10px;
 }
 
@@ -77,12 +72,9 @@ button:hover {
   margin: 5px 0;
 }
 
-/* Estilos para mensaje de error */
 .error-message {
-  background-color: #ffcccc;
-  color: #d9534f;
-  padding: 15px;
-  border-radius: 10px;
+  color: red;
+  font-weight: bold;
   margin-top: 20px;
-  font-size: 18px;
 }
+

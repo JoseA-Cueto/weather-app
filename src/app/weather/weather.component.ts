@@ -14,6 +14,18 @@ export class WeatherComponent {
   city: string = '';  // Campo de entrada para la ciudad
   weatherData: any = null;  // Aquí almacenaremos los datos del clima
   errorMessage: string = '';  // Aquí almacenaremos los posibles errores
+ // Lista local de ciudades
+ cityList: string[] = [
+  'New York', 'Los Angeles', 'Chicago', 'Houston', 'Phoenix',
+  'Philadelphia', 'San Antonio', 'San Diego', 'Dallas', 'San Jose',
+  'Austin', 'Jacksonville', 'Fort Worth', 'Columbus', 'San Francisco',
+  'Indianapolis', 'Charlotte', 'Seattle', 'Denver', 'Washington D.C.',
+  'Boston', 'El Paso', 'Detroit', 'Nashville', 'Oklahoma City',
+  'Portland', 'Las Vegas', 'Memphis', 'Louisville', 'Baltimore',
+  'Milwaukee', 'Albuquerque', 'Tucson', 'Fresno', 'Sacramento',
+  'Kansas City', 'Long Beach', 'Mesa', 'Virginia Beach', 'Atlanta',
+  'Colorado Springs', 'Raleigh', 'Omaha'
+];
 
   constructor(private http: HttpClient) {}  // Inyectar HttpClient en el componente
 

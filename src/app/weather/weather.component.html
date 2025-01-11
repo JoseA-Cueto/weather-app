@@ -2,11 +2,17 @@
   <h1>Weather App</h1>
   
   <div class="input-container">
-    <input [(ngModel)]="city" placeholder="Enter city" />
+    <select [(ngModel)]="city" class="city-select">
+      <option *ngFor="let city of cityList" [value]="city">{{ city }}</option>
+    </select>
     <button (click)="getWeather()">Get Weather</button>
   </div>
 
   <div *ngIf="weatherData" class="weather-info">
+    <!-- Icono de Sol -->
+    <div class="weather-icon">
+      <i class="fas fa-sun"></i>  <!-- Ícono de sol -->
+    </div>
     <h2>{{ weatherData.name }}</h2>
     <div class="temp-info">
       <p><strong>{{ weatherData.main.temp }}°C</strong></p>
@@ -19,4 +25,3 @@
     <p>{{ errorMessage }}</p>
   </div>
 </div>
-
